@@ -124,7 +124,7 @@ const Login = () => {
               <input
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                type={showPassword ? "password" : "text"}
+                type={!showPassword ? "password" : "text"}
                 placeholder="enter password"
                 id="password"
                 required
@@ -135,9 +135,9 @@ const Login = () => {
                 className="flex items-center gap-1 cursor-pointer text-sm text-gray-600"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {!showPassword ? <FaRegEye /> : <FaEyeSlash />}
+                {showPassword ? <FaRegEye /> : <FaEyeSlash />}
 
-                <span>{showPassword ? "Show Password" : "Hide Password"}</span>
+                <span>{!showPassword ? "Show Password" : "Hide Password"}</span>
               </div>
             </div>
 

@@ -1,21 +1,20 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Login from './pages/Login'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import  {Toaster}  from "react-hot-toast";
+import Shopping from "./pages/Shopping";
 
 const App = () => {
   return (
-    <>
-    
-    
-    <Routes>
+    <div>
+      <Toaster position="top-right" reverseOrder={false} />
 
-      <Route path='/login' element={<Login/>}/>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/shopping" element={<Shopping />} />
+      </Routes>
+    </div>
+  );
+};
 
-    </Routes>
-    
-    
-    </>
-  )
-}
-
-export default App
+export default App;
